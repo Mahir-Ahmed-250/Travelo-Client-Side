@@ -1,0 +1,99 @@
+.footer{
+    background-color:rgb(172, 151, 62);
+    width: 100%;
+    text-align: left;
+    font: bold 20px sans-serif;
+    padding: 50px;
+    margin-top: 50px;
+   }
+.footer-1,
+.footer-2,
+.footer-3,
+.footer-4{
+    display: inline-block;
+    vertical-align: top;
+   }
+.footer .footer-1{
+    width: 20%;  
+   }
+.company-name{
+    color:white;
+    font-family:cursive;
+    font-size: 36px;
+    font-weight: bolder;
+   };   
+.footer .footer-2{
+    width: 15%;
+   }
+.payment{
+    width: 350px;
+    height: 250px;
+    margin-top: -50px;
+}
+.footer .footer-3{
+    width: 20%;
+    margin-top: 20px;
+}
+.mail{
+    text-decoration: none;
+    color: white;
+}
+
+.footer .footer-4{
+    width: 20%;
+    margin-top: 20px;
+}
+
+.footer-icons1{
+    display: inline;
+    font-size: 50px;
+    color: 	#4267B2;
+}
+.footer-icons2{
+    display: inline;
+    font-size: 50px;
+    color: red;
+    padding-left: 10px;
+}
+.footer-icons3{
+    display: inline;
+    font-size: 50px;
+    color: #00acee;
+    padding-left: 10px;
+}
+.footer-icons4{
+    display: inline;
+    font-size: 50px;
+    color: #8a3ab9;
+    padding-left: 10px;
+}
+ 
+@media (max-width: 880px) { 
+    .footer .footer-1,
+    .footer .footer-2,
+    .footer .footer-3,
+    .footer .footer-4{
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+    }
+    .footer .footer-3{
+        margin-top: -50px;
+    }
+    .footer-icons1{
+       font-size: 40px;
+    }
+    .footer-icons2{
+       font-size: 40px;
+    }
+    .footer-icons3{
+       font-size: 40px;
+    }
+    .footer-icons4{
+       font-size: 40px;
+    }
+    .payment{
+        width: 220px;
+    }
+};

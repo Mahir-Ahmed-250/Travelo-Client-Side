@@ -1,0 +1,36 @@
+.logo{
+   width:40px;
+}
+.nav-background{
+    background-color:rgb(172, 151, 62);
+}
+.nav-links{
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 20px;
+    color: white;
+    display: block;
+    padding:5px;
+}
+.company-name{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px; 
+    text-decoration: none;
+    color:white;
+    font-weight: bolder;
+}
+.login-btn{
+    margin-left: 20px;
+}
+.nav-img{
+    border-radius: 50%;
+    width: 45px;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+.logout-btn{
+    margin-left: 20px;   
+}
+.nav-name{
+    font-size: 20px;
+}
