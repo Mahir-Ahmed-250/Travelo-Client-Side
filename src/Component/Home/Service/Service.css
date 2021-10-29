@@ -1,0 +1,14 @@
+.service-img{
+    height: 300px;
+    border-radius: 75px 75px 75px 75px;  
+}
+.card{
+    height: 100%;
+}
+.home-card{
+    border-radius: 75px;
+}
+
+.description{
+    text-align: justify;
+}

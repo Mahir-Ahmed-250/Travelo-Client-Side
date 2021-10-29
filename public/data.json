@@ -1,0 +1,44 @@
+[
+    {
+        "id": 100,
+        "name": "Kashmir",
+        "price": 15,
+        "img": "https://i.ibb.co/gVWnbRt/kasmir.jpg",
+        "description": "Jammu & Kashmir, a piece of heaven on earth, is the 19th largest state in India and it is located mostly all in the Himalayan mountains. It is also the only state in India with a Muslim-majority population."
+    },
+    {
+        "id": 101,
+        "name": "Turkey",
+        "price": 12,
+        "img": " https://i.ibb.co/wQ2yBS5/Image-of-Istanbul-with-Suleymaniye-Mosque-during-sunset.jpg",
+        "description": "Some of the earliest-known human communities are here. Hittites, Phrygians, Greeks, Romans, Byzantines, Crusaders, Seljuks, Mongols, Ottomans and others have all left their works of art, architecture and culture in what is now the Turkish homeland."
+    },
+    {
+        "id": 102,
+        "name": "Japan",
+        "price": 20,
+        "img": "  https://i.ibb.co/3N5WfTK/Japan.jpg",
+        "description": "Ancient, adaptive and advanced, with a culture influenced by both ancient philosophy and modern enterprise, Japan offers a heightened version of the familiar and a singular culture that captivates travelers."
+    },
+    {
+        "id": 103,
+        "name": "Georgia",
+        "price": 15,
+        "img": "  https://i.ibb.co/Nyd2pWJ/georgia.jpg",
+        "description": "Georgia is a small country situated on the crossroad of Europe and Asia. From the south-east it has a border with Azerbaijan, from the south – with Armenia and Turkey, from the north - with Russia. The western part of Georgia is washed by the Black Sea. Tbilisi is a capital of Georgia founded in the fifth century."
+    },
+    {
+        "id": 104,
+        "name": "Maldives",
+        "price": 15,
+        "img": "https://i.ibb.co/gwtqVG3/maldives.jpg",
+        "description": "The island nation of the Maldives is popular with honeymooners looking for seclusion and adventurers looking to explore the depths of the sea on a scuba diving and snorkeling excursion. "
+    },
+    {
+        "id": 105,
+        "name": "Austria",
+        "price": 18,
+        "img": "https://i.ibb.co/KDnFmyG/Austria.jpg",
+        "description": "Austria is a multifaceted nation. It's colorful mix of old-world architecture, and religious, historic and military sites juxtaposed alongside unparalleled natural wonders – alpine valleys, snow-capped mountains, sapphire lakes – and modern, vibrant city life."
+    }
+]
