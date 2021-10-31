@@ -8,18 +8,25 @@ import Service from '../Service/Service';
 const Services = () => {
     const [services, setServices] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://intense-lake-48249.herokuapp.com/services')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
     const { isLoading } = useAuth()
     if (isLoading) {
-        return <Spinner animation="border" variant="dark" />
+        return <div> <Spinner animation="grow" variant="primary" />
+            <Spinner animation="grow" variant="secondary" />
+            <Spinner animation="grow" variant="success" />
+            <Spinner animation="grow" variant="danger" />
+            <Spinner animation="grow" variant="warning" />
+            <Spinner animation="grow" variant="info" />
+            <Spinner animation="grow" variant="light" />
+            <Spinner animation="grow" variant="dark" /></div>
     }
     return (
         <div className="container">
-            <h2 className="services">Our Services</h2>
-            <div className="row">
+            <h2 className="mt-5 py-3">Our Services</h2>
+            <div className="row mt-3">
                 {
                     services.map(service => <Service key={service._id} service={service}></Service>)
                 }

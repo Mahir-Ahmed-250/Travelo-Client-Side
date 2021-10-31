@@ -5,26 +5,21 @@ import { Card } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router';
 import useAuth from '../../Hooks/useAuth';
-
+import './OrderPage.css'
 
 const OrderPage = () => {
-    const { _id } = useParams()
-    const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const [serviceDetails, setServiceDetails] = useState([]);
-
+    const { _id } = useParams();
+    const { register, handleSubmit, reset } = useForm();
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${_id}`)
+        fetch(`https://intense-lake-48249.herokuapp.com/services/${_id}`)
             .then((res) => res.json())
             .then((data) => setServiceDetails(data));
-    }, [])
-
+    }, [_id])
 
     const onSubmit = data => {
-
-
-        console.log(data);
-
-        fetch('http://localhost:5000/orders', {
+        data.Status = "Pending"
+        fetch('https://intense-lake-48249.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -35,48 +30,35 @@ const OrderPage = () => {
             .then(result => {
                 if (result.insertedId) {
                     alert('Order Processed Successfully')
-
                     reset()
                 }
             })
     }
-
-
     const { users } = useAuth()
-
-
-
     return (
         <div className='container' >
             <div className='row'>
                 <div className='col-lg-6 mt-3'>
                     <Card className='card'>
-                        <Card.Img style={{ width: '100%' }} variant="top" src={serviceDetails.img} />
+                        <Card.Img className="order-img" style={{ width: '100%' }} variant="top" src={serviceDetails.img} />
                         <Card.Body>
-                            <h5 className=''> {serviceDetails.name}</h5>
-                            <h6 className='price'>Price: ${serviceDetails.price}</h6>
-                            <p>{serviceDetails.description}</p>
+                            <h5 className='service-name'> {serviceDetails.name}</h5>
+                            <h6 className='service-price'>Price: ${serviceDetails.price}</h6>
+                            <p className="description">{serviceDetails.description}</p>
                         </Card.Body>
                     </Card>
                 </div>
-                <div className='col-lg-6'>
+                <div className='col-lg-6 order-service'>
 
-                    <form className='shipping-form' onSubmit={handleSubmit(onSubmit)}>
-                        <h2>Shipping Details</h2>
+                    <form className='' onSubmit={handleSubmit(onSubmit)}>
+                        <h2>Order Details</h2>
                         <input defaultValue={users.displayName} {...register("Name")} />
-                        <input readOnly defaultValue={serviceDetails.name} {...register("Service")} />
-
-
                         <input defaultValue={users.email} {...register("Email", { required: true })} />
-
+                        {serviceDetails.name && <input readOnly defaultValue={serviceDetails.name} {...register("Service", { required: true })} />}
+                        {serviceDetails.price && <input readOnly defaultValue={serviceDetails.price}{...register("Price", { required: true })} />}
                         <input placeholder='Address' {...register("Address", { required: true })} />
-
-                        <input placeholder='Phone Number' {...register("Phone", { required: true })} />
-
-
-                        {errors.Email && <span className='error'>This field is required</span>}
-
-                        <input type="submit" />
+                        <input type="number" placeholder='Phone Number' {...register("Phone", { required: true })} />
+                        <input className="btn btn-success" type="submit" />
                     </form>
 
 

@@ -2,7 +2,6 @@ import React from 'react';
 import { Container, Navbar, Button } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
-import logo from '../Logo/favicon.ico'
 import './Header.css'
 
 
@@ -12,10 +11,9 @@ import './Header.css'
 const Header = () => {
     const { users, logOut } = useAuth()
     return (
-        <Navbar collapseOnSelect expand="lg" className='nav-background' variant="dark">
+        <Navbar sticky='top' collapseOnSelect expand="lg" className='nav-background' variant="dark">
             <Container>
                 <NavLink className='company-name nav-links' to="/" >
-                    <img className='logo' src={logo} alt="" />
                     <span>Travelo</span>
                 </NavLink>
                 <Navbar.Toggle />
@@ -26,7 +24,7 @@ const Header = () => {
 
 
 
-                    {users.email ? <NavLink className='nav-links' to="/manageService">Manage All Service</NavLink> : ''}
+                    {users.email ? <NavLink className='nav-links' to="/manageService">Manage All Orders</NavLink> : ''}
 
                     {users.email ? <NavLink className='nav-links' to="/addService">Add a Service</NavLink> : ''}
 

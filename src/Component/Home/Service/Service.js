@@ -11,8 +11,8 @@ const Service = ({ service }) => {
             <Card className='card home-card' >
                 <Card.Body>
                     <Card.Img variant="top" className='service-img' src={img} />
-                    <h5 className=''>{name}</h5>
-                    <p>Price: {price}</p>
+                    <h5 className='service-name'>{name}</h5>
+                    <p className='service-price'>Price: ${price}</p>
                     <p className="description">{description}</p>
                     <Link to={`/services/${_id}`}><button className='btn btn-dark'>Book Now!</button></Link>
                 </Card.Body>

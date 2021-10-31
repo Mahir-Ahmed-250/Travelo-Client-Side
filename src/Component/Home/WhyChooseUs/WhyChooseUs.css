@@ -1,0 +1,29 @@
+.why-us {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)), black url('./1.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 100px 100px 100px;
+    margin: 80px 0;
+}
+.why-us-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+}
+.single-service {
+    background: white;
+    border-radius: 20px;
+    margin: 15px;
+    padding: 15px;
+    font-size: 20px;
+}
+.single-service h3{
+    font-weight: bolder;
+}
+ @media(max-width:880px){
+    .why-us-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;   
+    }
+ }

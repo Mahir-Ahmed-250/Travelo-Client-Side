@@ -4,11 +4,27 @@
 }
 .card{
     height: 100%;
+    cursor: pointer;
+}
+.card:hover{
+ transform: scale(1.01);
 }
 .home-card{
     border-radius: 75px;
 }
-
+.service-name{
+    margin-top: 15px;
+    font-family: cursive;
+    font-weight: bolder;
+    color: blue;
+    font-size: 25px;
+}
+.service-price{
+    margin-top: 15px;
+    font-weight: bolder;
+    font-size: 20px;
+}
 .description{
     text-align: justify;
+    color: gray;
 }

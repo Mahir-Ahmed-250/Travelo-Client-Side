@@ -1,7 +1,6 @@
 import { faFacebook, faInstagram, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import logo from '../Logo/favicon.ico'
 import img1 from './1.png'
 import './Footer.css'
 
@@ -14,7 +13,7 @@ const Footer = () => {
         <div>
             <div className="footer">
                 <div className="footer-1">
-                    <h3>  <img className='logo' src={logo} alt="" />
+                    <h3>
                         <span className="company-name">Travelo</span></h3>
                     <p>Where the journey begins!</p>
                     <p className="footer-company-name">Travelo &copy; 2022</p>
