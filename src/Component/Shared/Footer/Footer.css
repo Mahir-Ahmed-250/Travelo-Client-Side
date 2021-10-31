@@ -15,16 +15,10 @@
    }
 .footer .footer-1{
     width: 20%;  
-   }
-.company-name{
-    color:white;
-    font-family:cursive;
-    font-size: 36px;
-    font-weight: bolder;
-   };   
+}  
 .footer .footer-2{
     width: 15%;
-   }
+}
 .payment{
     width: 350px;
     height: 250px;
